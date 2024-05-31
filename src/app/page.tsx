@@ -8,6 +8,8 @@ export default function Home() {
       hello world
       <Header />
       <Button>Test</Button>
+      <Button>Test</Button>
+      <Button>Test</Button>
     </main>
   );
 }
