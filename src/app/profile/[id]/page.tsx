@@ -1,13 +1,18 @@
 'use client';
 
-import { useParams } from 'next/navigation';
+import { useParams, useRouter } from 'next/navigation';
 import React from 'react';
 
 const ProfileId = () => {
   const param = useParams();
-  console.log(param.id);
   console.log(param);
-  return <div>ProfileId {param.id} </div>;
+  const router = useRouter();
+  return (
+    <>
+      ProfileId : {param.id}
+      <div onClick={() => router.push('/profile')}>Back to main profile</div>
+    </>
+  );
 };
 
 export default ProfileId;
